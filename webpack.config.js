@@ -10,6 +10,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+  devtool: "eval-source-map",
   module: {
     rules: [
       {
@@ -27,7 +28,8 @@ module.exports = {
   },
   devServer: {
   static: './dist',
-  open: true,
+  port: 1111,
+  open: false,
   hot: true,
 },
 
@@ -37,3 +39,4 @@ module.exports = {
     }),
   ]
 };
+
