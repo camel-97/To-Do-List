@@ -2,6 +2,7 @@
 //Project Creation
 //Todo Creation for projects
 //Methods for Prjects, and for Todos
+// All under the IFFE of projectManager
 
 export const projectManager = (() => {
 

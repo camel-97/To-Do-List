@@ -7,7 +7,7 @@
 body {
     height: 100vh; width: 100vw;
     display: grid;
-    grid-template-columns: 120px 1fr; grid-template-rows: 1fr 1fr 10fr;
+    grid-template-columns: 150px 1fr; grid-template-rows: 1fr 1fr 10fr;
     grid-template-areas:
     "side head"
     "side nav"
@@ -17,3 +17,38 @@ body {
 .nav {grid-area: nav;}
 .side-bar {grid-area: side;}
 .main {grid-area: main;}
+
+.form-hidden {
+    display: none;
+}
+
+#form-container {
+    position: fixed;
+    z-index: 999;
+    width: 300px; transform: translateX(-150px);
+    left: 50vw; top: 200px;
+    padding: 20px;
+    background-color: white;
+    border: solid black;
+    border-radius: 10px;
+}
+#new-project-form{
+    display: flex; flex-direction: column;
+    align-items: left;
+}
+
+form div {
+    padding: 5px;
+}
+
+.radio-selections {
+    display: flex; flex-direction: column;
+    padding: 0px;
+}
+.radio-selections div input{
+    vertical-align: middle;
+}
+
+.form-header {
+    text-align: center;
+}
