@@ -8,10 +8,44 @@
 <body>
     <header class="header"></header>
     <nav class="nav">
-        <button class="new"> + New Project</button>
+        <button id="new"> + New Project</button>
         <button class="filter">Filter</button>
     </nav>
-    <aside class="side-bar"></aside>
+    <aside class="side-bar">
+        <input type="search" placeholder="Search projects...">
+        <div class="projects-head">Projects</div>
+    </aside>
     <main class="main"></main>
+    <div id="form-container" class="hidden-form">
+        <form id="new-project-form">
+            <div class="form-header">New Project</div>
+            <div>
+                <label for="title">Project Name:</label>
+                <input type="text" name="title-input" id="title-input">
+            </div>
+            <div>
+                <label for="due-date-input">Deadline:</label>
+                <input type="date" name="due-date-input" id="due-date-input">
+            </div>
+            <div>
+                <label class="radio-header">Priority:</label>
+            </div>
+            <div class="radio-selections">
+                <div>
+                    <label for="low">Low</label>
+                    <input type="radio" name="priority" value="low">
+                </div>
+                <div>
+                    <label for="high">High</label>
+                    <input type="radio" name="priority" value="high">
+                </div>
+                <div>
+                <label for="immediate">Immediate</label>
+                <input type="radio" name="priority" value="immediate">
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
+ 
