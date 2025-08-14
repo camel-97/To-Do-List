@@ -24,6 +24,10 @@
                 <input type="text" name="title-input" id="title-input">
             </div>
             <div>
+                <label for="description">Description:</label>
+                <textarea name="description" id="description-input" rows="3" cols="33"></textarea>
+            </div>
+            <div>
                 <label for="due-date-input">Deadline:</label>
                 <input type="date" name="due-date-input" id="due-date-input">
             </div>
@@ -40,9 +44,11 @@
                     <input type="radio" name="priority" value="high">
                 </div>
                 <div>
-                <label for="immediate">Immediate</label>
-                <input type="radio" name="priority" value="immediate">
+                    <label for="immediate">Immediate</label>
+                    <input type="radio" name="priority" value="immediate">
                 </div>
+                <button id="submit-btn" type="submit">Submit</button>
+                <button id="reset-btn" type="reset">Clear</button>
             </div>
         </form>
     </div>
