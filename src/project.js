@@ -52,7 +52,9 @@ export const projectManager = (() => {
     const createProject = (title, description, dueDate, priority) => {
         const project = new Project(title, description, dueDate, priority);
         projectArray.push(project);
-        return project;   
+        return {
+            project,
+            projectArray }  
     }
 
     return {

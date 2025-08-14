@@ -17,3 +17,7 @@ body {
 .nav {grid-area: nav;}
 .side-bar {grid-area: side;}
 .main {grid-area: main;}
+
+.nav button:hover {
+    cursor: pointer;
+}
