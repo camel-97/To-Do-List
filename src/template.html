@@ -16,45 +16,44 @@
         <div class="projects-head">Projects</div>
     </aside>
     <main class="main">
-        <div class="project-card">
-            <div class="card-head">
-                <div class="card-title">title</div>
-                <div class="card-head-right">
-                    <div class="priority-icon">!</div>
-                    <button class="delete-project">X</button>
+        <template id="project-card-template">
+            <div class="project-card">
+                <div class="card-head">
+                    <div class="card-title"></div>
+                    <div class="card-head-right">
+                        <div class="priority-icon" id="priority-id">!</div>
+                        <button class="delete-project">X</button>
+                    </div>
+                </div>
+                <div class="project-description"></div>
+                <div class="tasks-head">
+                    <div class="tasks">To-Dos</div>
+                    <div class="tasks-head-right">
+                        <button class="filter-tasks">filter</button>
+                        <button class="add-task"> + </button>
+                    </div>
+                </div>
+                    <div class="todos"></div>
+                <div class="card-footer">
+                    <div class="due-date-footer"></div>
                 </div>
             </div>
-            <div class="project-description">description</div>
-            <div class="tasks-head">
-                <div class="tasks">Todos</div>
-                <div class="tasks-head-right">
-                    <button class="filter-tasks">filter</button>
-                    <button class="add-task">+</button>
-                </div>
-            </div>
-                <div class="todos">
-
-            </div>
-            <div class="card-footer">
-                <div class="due-date-footer">duedate</div>
-           
-            
-        </div>
+        </template>
     </main>
     <div id="form-container" class="hidden-form">
         <form id="new-project-form">
             <div class="form-header">New Project</div>
             <div>
                 <label for="title">Project Name:</label>
-                <input type="text" name="title-input" id="title-input">
+                <input type="text" name="title-input" id="title-input" required>
             </div>
             <div>
                 <label for="description">Description:</label>
-                <textarea name="description" id="description-input" rows="3" cols="33"></textarea>
+                <textarea name="description" id="description-input" rows="3" cols="33" required></textarea>
             </div>
             <div>
                 <label for="due-date-input">Deadline:</label>
-                <input type="date" name="due-date-input" id="due-date-input">
+                <input type="date" name="due-date-input" id="due-date-input" required>
             </div>
             <div>
                 <label class="radio-header">Priority:</label>
@@ -62,7 +61,7 @@
             <div class="radio-selections">
                 <div>
                     <label for="low">Low</label>
-                    <input type="radio" name="priority" value="low">
+                    <input type="radio" name="priority" value="low" required>
                 </div>
                 <div>
                     <label for="high">High</label>

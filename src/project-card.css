@@ -1,0 +1,78 @@
+.project-card {
+    display: flex; flex-direction: column;
+    height: 300px;
+    width: 300px;
+}
+
+.card-head {
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-head-right {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.project-description {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.todos {
+    margin: 5px;
+    height: 100%;
+}
+
+.tasks-head {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tasks-head-right {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-footer {
+    margin-top: auto;
+}
+
+.delete-project, .add-task {
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.priority-icon {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 27px;
+    font-weight: 900;
+}
+
+.filter-tasks {
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.high {
+    background-color: red;
+}
+
+.low {
+    background-color: yellow;
+}
+
+.immediate {
+    background-color: black;
+    color: white;
+}
