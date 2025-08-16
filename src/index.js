@@ -9,17 +9,23 @@ import { clearForm, closeForm, bindForm, openForm } from "./project-form.js";
 
 //wait for DOM to load
 window.addEventListener("DOMContentLoaded", () => {
+    
     const newProdBtn = document.getElementById("new");
     newProdBtn.addEventListener("click", openForm);
 
     bindForm(({title, description, dueDate, priority}) => {
         const { project } = projectManager.createProject(title, description, dueDate, priority);
-        const clone = renderProjectCard(project);
-        appendToMain(clone);
+        const card = renderProjectCard(project);
+        appendToMain(card);
         clearForm();
         closeForm();
     })
+
+
+
 });
+
+
     
     
 

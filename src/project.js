@@ -24,6 +24,7 @@ export const projectManager = (() => {
             this.dueDate = dueDate;
             this.priority = priority;
             this.completed = false;
+            this.id = crypto.randomUUID();
             this.toDos = [];
 
         };
@@ -55,11 +56,19 @@ export const projectManager = (() => {
         return {
             project,
             projectArray }  
+    } 
+    
+    const removeProject = (id) => {
+        const proidx = projectArray.findIndex(proj => proj.id === id);
+        if (proidx !== -1) {
+            projectArray.splice(proidx, 1);
+        }
     }
 
     return {
         projectArray,
-        createProject
+        createProject,
+        removeProject
     }
 })()
 
