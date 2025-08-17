@@ -17,7 +17,7 @@ export function clearForm() {
 export function deleteProject() {
     const projectCard = document.querySelector(".project-card");
     projectCard.remove()
-    projectManager.removeProject(project.id);
+    projectManager.removeProject(project.id) ;
     console.log(projectManager.projectArray);
 }
 
