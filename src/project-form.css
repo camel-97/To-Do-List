@@ -5,9 +5,8 @@
 #form-container {
     position: fixed;
     z-index: 999;
-    width: 300px; transform: translateX(-150px);
-    left: 50vw; top: 200px;
-    padding: 20px;
+    width: 290px; transform: translateX(-150px);
+    left: 50vw; top: 100px;
     background-color: white;
     border: solid black;
     border-radius: 10px;
@@ -18,18 +17,51 @@
 }
 
 form div {
-    padding: 5px;
+    margin-left: 10px;
+    padding: 2px
 }
 
 .radio-selections {
     display: flex; flex-direction: column;
-    padding: 0px;
 }
-.radio-selections div input{
+
+.radio-selections div label{
     vertical-align: middle;
+    font-weight: 300;
+}
+
+.form-title {
+    text-align: center;
+    width: 90px;
+    margin-left: 85px;
+    font-weight: 600;
+    margin-top: 5px;
 }
 
 .form-header {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+#exit-form {
+    width: 25px; height: 25px;
+    border-radius: 8px;
+    margin: 5px;
+    border: none;
+    background-color: rgb(213, 213, 213);
 }
 
+#submit-btn, #reset-btn {
+    width: 70px;
+    padding: 5px
+}
+.form-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+.form-btns button {
+   font-weight: 500;
+}
