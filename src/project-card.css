@@ -1,13 +1,22 @@
 .project-card {
     display: flex; flex-direction: column;
+    padding: 5px;
     height: 300px;
     width: 300px;
+    background: linear-gradient(to bottom right, rgb(233, 234, 235), rgb(238, 238, 238));
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgb(192, 191, 191);
 }
 
 .card-head {
     margin: 5px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.card-title {
+    font-weight: 500;
 }
 
 .card-head-right {
@@ -16,15 +25,35 @@
     align-items: center;
 }
 
+hr {
+  border: none;
+  margin-right: 5px; 
+  margin-left: 5px; 
+  height: 3px;          
+  background: #333;             
+}
+
 .project-description {
     margin-right: 5px;
     margin-left: 5px;
+    font-weight: 300;
+    margin-bottom: 10px;
 }
 
 .todos {
     margin: 5px;
     height: 100%;
+    background-color: rgb(252, 252, 252);
+    box-shadow: inset 0px 0px 5px 0px rgb(182, 182, 182);
+    border-radius: 2px;
+
 }
+
+.tasks {
+    font-weight: 500;
+    margin: auto 0;
+}
+
 
 .tasks-head {
     margin-top: 10px;
@@ -41,10 +70,15 @@
 }
 
 .card-footer {
-    margin-top: auto;
+    width: 100%;
 }
 
-.delete-project, .add-task {
+.due-date-footer {
+    text-align: center;
+    font-weight: 300;
+} 
+
+.delete-project {
     padding: 5px;
     width: 30px;
     height: 30px;
@@ -60,12 +94,14 @@
 }
 
 .filter-tasks {
-    padding: 5px;
+    padding: 3px;
+    border-width: 2px;
     border-radius: 8px;
 }
 
 .high {
-    background-color: red;
+    background-color: rgb(244, 49, 49);
+    opacity: 80%;
 }
 
 .low {
@@ -76,3 +112,13 @@
     background-color: black;
     color: white;
 }
+
+.add-task {
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: large;
+    line-height: 5px;
+}
+
