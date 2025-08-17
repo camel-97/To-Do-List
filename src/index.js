@@ -1,7 +1,8 @@
 // To Do list App
 import "./index.css";
 import "./project-form.css";
-import "./project-card.css"
+import "./project-card.css";
+import "./todo-table.css"
 import { projectManager } from "./project.js";
 import { renderProjectCard, appendToMain } from "./render-project-card.js"
 import { clearForm, closeForm, bindForm, openForm } from "./project-form.js";
