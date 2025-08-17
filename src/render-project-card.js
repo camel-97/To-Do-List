@@ -9,7 +9,7 @@ export function renderProjectCard(project) {
             
         card.querySelector(".card-title").textContent = project.title;
         card.querySelector(".project-description").textContent = project.description;
-        card.querySelector(".due-date-footer").textContent = project.dueDate;
+        card.querySelector(".due-date-footer").innerHTML = `Project Due Date: <strong>${project.dueDate}<strong>`;
             
         const dot = card.querySelector(".priority-icon");
         dot.classList.remove("high", "low", "immediate");
