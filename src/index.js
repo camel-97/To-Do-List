@@ -13,6 +13,12 @@ window.addEventListener("DOMContentLoaded", () => {
     const newProdBtn = document.getElementById("new");
     newProdBtn.addEventListener("click", openForm);
 
+    const exitFormBtn = document.getElementById("exit-form");
+    exitFormBtn.addEventListener("click", () => {
+        clearForm(),
+        closeForm();
+    });
+
     bindForm(({title, description, dueDate, priority}) => {
         const { project } = projectManager.createProject(title, description, dueDate, priority);
         const card = renderProjectCard(project);
@@ -20,9 +26,6 @@ window.addEventListener("DOMContentLoaded", () => {
         clearForm();
         closeForm();
     })
-
-
-
 });
 
 
