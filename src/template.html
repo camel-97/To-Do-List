@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do-List-Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header"></header>
@@ -42,14 +45,17 @@
     </main>
     <div id="form-container" class="hidden-form">
         <form id="new-project-form">
-            <div class="form-header">New Project</div>
+            <div class="form-header">
+                <div class="form-title">New Project</div>
+                <button id="exit-form">X</button>
+            </div>
             <div>
                 <label for="title">Project Name:</label>
                 <input type="text" name="title-input" id="title-input" required>
             </div>
             <div>
                 <label for="description">Description:</label>
-                <textarea name="description-input" id="description-input" rows="3" cols="33" required></textarea>
+                <textarea name="description-input" id="description-input" rows="3" cols="40s" required></textarea>
             </div>
             <div>
                 <label for="due-date-input">Deadline:</label>
@@ -71,8 +77,10 @@
                     <label for="immediate">Immediate</label>
                     <input type="radio" name="priority" value="immediate">
                 </div>
-                <button id="submit-btn" type="submit">Submit</button>
-                <button id="reset-btn" type="reset">Clear</button>
+                <div class="form-btns">
+                    <button id="submit-btn" type="submit">Submit</button>
+                    <button id="reset-btn" type="reset">Clear</button>
+                </div>
             </div>
         </form>
     </div>
