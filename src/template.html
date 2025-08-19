@@ -21,6 +21,43 @@
     <main class="main">
         <template id="project-card-template">
             <div class="project-card">
+                <div class="todo-form-container hide-todo-form">
+                    <form class="new-todo-form">
+                        <div class="todo-form-header">
+                            <div class="todo-form-title">New To-Do</div>
+                            <button id="close-form">X</button>
+                        </div>
+                        <div>
+                            <label for="todo-title">Project Name:</label>
+                            <input type="text" name="todo-title" id="todo-title-input" required>
+                        </div>
+                        <div>
+                            <label for="todo-due-date-input">Deadline:</label>
+                            <input type="date" name="todo-due-date-input" id="todo-due-date-input" required>
+                        </div>
+                        <div>
+                            <label class="radio-header">Priority:</label>
+                        </div>
+                        <div class="todo-radio-selections">
+                            <div>
+                                <label for="low">Low</label>
+                                <input type="radio" name="priority" value="low" required>
+                            </div>
+                            <div>
+                                <label for="high">High</label>
+                                <input type="radio" name="priority" value="high">
+                            </div>
+                            <div>
+                                <label for="immediate">Immediate</label>
+                                <input type="radio" name="priority" value="immediate">
+                            </div>
+                            <div class="todo-form-btns">
+                                <button id="todo-submit-btn" type="submit">Submit</button>
+                                <button id="todo-reset-btn" type="reset">Clear</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
                 <div class="card-head">
                     <div class="card-title"></div>
                     <div class="card-head-right">
