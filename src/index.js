@@ -2,7 +2,9 @@
 import "./index.css";
 import "./project-form.css";
 import "./project-card.css";
-import "./todo-table.css"
+import "./todo-table.css";
+import "./todo-form.css";
+import { wireTodoCard } from "./todo-form.js"
 import { projectManager } from "./project.js";
 import { renderProjectCard, appendToMain } from "./render-project-card.js"
 import { clearForm, closeForm, bindForm, openForm } from "./project-form.js";
@@ -10,7 +12,6 @@ import { clearForm, closeForm, bindForm, openForm } from "./project-form.js";
 
 //wait for DOM to load
 window.addEventListener("DOMContentLoaded", () => {
-    
     const newProdBtn = document.getElementById("new");
     newProdBtn.addEventListener("click", openForm);
 
@@ -24,9 +25,13 @@ window.addEventListener("DOMContentLoaded", () => {
         const { project } = projectManager.createProject(title, description, dueDate, priority);
         const card = renderProjectCard(project);
         appendToMain(card);
+        wireTodoCard(card);
         clearForm();
         closeForm();
+        
     })
+    
+    
 });
 
 

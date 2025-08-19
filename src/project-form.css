@@ -2,10 +2,9 @@
     display: none;
 }
 
-.hide-todo-form{
+.hide-todo-form {
     display: none;
 }
-
 
 #form-container{
     position: fixed;
