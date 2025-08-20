@@ -65,12 +65,22 @@ export const projectManager = (() => {
         }
     }
 
+    const getProjectById = (id) => projectArray.find(p => p.id === id);
+
+    const addToDo = (projectId, title, dueDate, priority) => {
+        const project = getProjectById(projectId);
+        if (!project) return null;
+        return project.addToDo(title, dueDate, priority);
+    }
+
     return {
         projectArray,
         createProject,
-        removeProject
+        removeProject,
+        addToDo,
+        getProjectById
     }
-})()
+})();
 
 
 

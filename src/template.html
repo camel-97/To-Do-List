@@ -25,15 +25,15 @@
                     <form class="new-todo-form">
                         <div class="todo-form-header">
                             <div class="todo-form-title">New To-Do</div>
-                            <button class="close-form">X</button>
+                            <button class="close-form" type="button">X</button>
                         </div>
                         <div>
-                            <label for="todo-title">Project Name:</label>
-                            <input type="text" name="todo-title" id="todo-title-input" required>
+                            <label for="todo-title">Task Name:</label>
+                            <input type="text" name="todo-title" class="todo-title-input" required>
                         </div>
                         <div>
                             <label for="todo-due-date-input">Deadline:</label>
-                            <input type="date" name="todo-due-date-input" id="todo-due-date-input" required>
+                            <input type="date" name="todo-due-date-input" class="todo-due-date-input" required>
                         </div>
                         <div>
                             <label class="radio-header">Priority:</label>
@@ -77,25 +77,25 @@
                     <div class="todos">
                         <table class="todos-table">
                             <tr class="table-head-row">
-                                <th class="table-task-header">Task</th>
+                                <th>Task</th>
                                 <th>Due Date</th>
                                 <th>Priority</th>
                                 <th>Completed</th>
                             </tr>
                         </table>
                     </div>
+                <template class="todo-data-row">
+                    <tr class="temp-row">
+                        <td class="task-cell"></td>
+                        <td class="due-cell"></td>
+                        <td class="priority-cell"><div>!</div></td>
+                        <td class="completed"></td>
+                    </tr>
+                </template>
                 <div class="card-footer">
                     <div class="due-date-footer"></div>
                 </div>
             </div>
-        </template>
-        <template id="todo-data-row">
-                <tr class="temp-row">
-                    <td class="task-cell"></td>
-                    <td class="due-cell"></td>
-                    <td class="priority-cell"><div>!</div></td>
-                    <td class=""></td>
-                </tr>
         </template>
     </main>
     <div id="form-container" class="hidden-form">
