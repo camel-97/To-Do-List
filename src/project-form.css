@@ -64,7 +64,7 @@ form div {
     display: flex;
     justify-content: space-between;
 }
-#exit-form, #close-form {
+#exit-form, .close-form {
     width: 25px; height: 25px;
     border-radius: 8px;
     margin: 5px;
