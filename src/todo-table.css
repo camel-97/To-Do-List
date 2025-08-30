@@ -18,3 +18,45 @@ th {
 th:last-child {
     border-right: none;
 }
+
+td {
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.priority-cell {
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+
+}
+
+.priority-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.completed {
+    width: 20px;
+    height: 20px;
+    line-height: 12px;
+}
+
+.completed-false {
+    background-color: red;
+    color: white;
+}
+
+.completed-true {
+    background-color: green;
+    color: white;
+}
+
+
+

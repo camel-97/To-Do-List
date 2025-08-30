@@ -107,6 +107,7 @@ hr {
 
 .high {
     background-color: rgb(244, 49, 49);
+    color: white;
     opacity: 80%;
 }
 
@@ -127,5 +128,4 @@ hr {
     font-weight: 300;
     border: none;
     background-color: rgb(156, 219, 161);
-
 }

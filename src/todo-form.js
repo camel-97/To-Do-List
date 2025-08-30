@@ -14,12 +14,36 @@ export function wireTodoCard(card) {
         e.preventDefault();
         formCont.classList.remove("hide-todo-form");
     });
-    card.dataset.todoWired = "1";
-
     exitBtn.addEventListener("click", () => {
         todoForm.reset();
         formCont.classList.add("hide-todo-form")
-    })
+    });
+
+    card.querySelector(".todos-table").addEventListener("click", (e) =>{
+            const toggleBtn = e.target.closest(".completed");
+            if (!toggleBtn) return;
+
+            const row = toggleBtn.closest("[data-todo-id]");
+            if (!row) return;
+
+            const todoId = row.dataset.todoId;
+            const projectId = card.dataset.projectId;
+
+            const project = projectManager.getProjectById(projectId);
+            project.toggleComplete(todoId);
+
+            const toDo = project.toDos.find(t => t.id === todoId);
+            if (toDo.completed){
+                toggleBtn.textContent = "o"
+                toggleBtn.classList.remove("completed-false");
+                toggleBtn.classList.add("completed-true");
+            }
+            else {
+                toggleBtn.textContent = "x"
+                toggleBtn.classList.remove("completed-true");
+                toggleBtn.classList.add("completed-false");
+            }
+        })
 
     todoForm.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -38,12 +62,13 @@ export function wireTodoCard(card) {
         clone.querySelector(".task-cell").textContent = createdTodo.title;
         clone.querySelector(".due-cell").textContent = createdTodo.dueDate;
         clone.querySelector(".priority-cell").classList.add(createdTodo.priority);
-        clone.querySelector(".completed").textContent = "Pending...";
+        clone.querySelector(".completed").textContent = "x";
+        clone.querySelector(".completed").classList.add("completed-false");
         clone.querySelector(".temp-row").dataset.todoId = createdTodo.id;
 
         cardTable.appendChild(clone);
         todoForm.reset();
         formCont.classList.add("hide-todo-form");
     })
-};
+}
 
