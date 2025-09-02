@@ -6,9 +6,9 @@ import "./todo-table.css";
 import "./todo-form.css";
 import { wireTodoCard } from "./todo-form.js"
 import { projectManager } from "./project.js";
+import { renderSidebar} from "./sidebar.js";
 import { renderProjectCard, appendToMain } from "./render-project-card.js"
 import { clearForm, closeForm, bindForm, openForm } from "./project-form.js";
-
 
 //wait for DOM to load
 window.addEventListener("DOMContentLoaded", () => {
@@ -28,10 +28,8 @@ window.addEventListener("DOMContentLoaded", () => {
         wireTodoCard(card);
         clearForm();
         closeForm();
-        
+        renderSidebar();
     })
-    
-    
 });
 
 

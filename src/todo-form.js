@@ -56,6 +56,7 @@ export function wireTodoCard(card) {
         const createdTodo = projectManager.addToDo(projectId, title, dueDate, priority);
         
         const template = card.querySelector(".todo-data-row");
+        template.dataset.todoId = createdTodo.id;
         const clone = template.content.cloneNode(true);
         const cardTable = card.querySelector(".todos-table")
 
@@ -71,4 +72,5 @@ export function wireTodoCard(card) {
         formCont.classList.add("hide-todo-form");
     })
 }
+
 

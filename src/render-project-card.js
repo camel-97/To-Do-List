@@ -1,4 +1,5 @@
   import { projectManager } from "./project";
+  import { renderSidebar } from "./sidebar";
 
 export function renderProjectCard(project) {     
         const template = document.getElementById("project-card-template");
@@ -22,13 +23,33 @@ export function renderProjectCard(project) {
             projectManager.removeProject(project.id);
             card.remove();
             console.log(projectManager.projectArray);
+            renderSidebar();
             }
             else { return };
-    });
-        return card;
-}
+        });
+        const clearBtn= card.querySelector(".clear-completed");
+        clearBtn.addEventListener("click", () => {
+          const projectId = card.dataset.projectId;
+          const proj = projectManager.getProjectById(projectId);
+          const completedIds = proj.toDos.filter(t => t.completed).map(t => t.id);
+          completedIds.forEach(id => {
+              proj.removeTodo();
+              const table = card.querySelector(".todos-table");
+              const row = table.querySelector('[data-todo-id="'+ id +'"]');
+              if (row) {
+                row.remove();
+              }
+
+            })
+        })
+    return card;
+  }
+    
+
+        
+
 
 export function appendToMain(card) {
     const main = document.querySelector("main");
     main.appendChild(card);
-};
+}

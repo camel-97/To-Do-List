@@ -76,6 +76,10 @@ hr {
     width: 100%;
     font-size: 14px;
     font-weight: 900;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 5px;
 }
 
 .due-date-footer {
@@ -98,11 +102,12 @@ hr {
     line-height: 25px;
 }
 
-.filter-tasks {
+.filter-tasks, .clear-completed {
     padding: 3px;
     border-width: 2px;
-    border-radius: 8px;
-    border: none;
+    border-radius: 5px;
+    border:  solid 1px;
+    background-color: white;
 }
 
 .high {
@@ -128,4 +133,5 @@ hr {
     font-weight: 300;
     border: none;
     background-color: rgb(156, 219, 161);
+    line-height: 12px;
 }

@@ -35,7 +35,7 @@ export const projectManager = (() => {
             return newToDo;
             }
 
-        removeToDo(id) { 
+        removeTodo(id) { 
             const idx = this.toDos.findIndex(todo => todo.id === id);
             if (idx !== -1) this.toDos.splice(idx, 1);
             }    
